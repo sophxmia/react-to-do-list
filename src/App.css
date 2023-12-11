@@ -1,3 +1,26 @@
+:root {
+  --footer-font: monospace;
+}
 .App {
+  max-width: 700px;
   text-align: center;
+  margin: 5% auto;
+}
+.App footer {
+  font-size: 11px;
+  text-align: center;
+  font-family: var(--footer-font);
+  opacity: 0.6;
+  display: block;
+}
+.App a {
+  text-decoration: none;
+}
+.App li {
+  list-style: none;
+}
+.App .logo {
+  max-width: 150px;
+  display: block;
+  margin: 30px auto;
 }
