@@ -10,6 +10,7 @@ export default function TodoForm(props) {
   function handleSubmit(event) {
     event.preventDefault();
     props.addTodo(task);
+    setTask("");
   }
   return (
     <form className="TodoForm" onSubmit={handleSubmit}>
@@ -20,6 +21,7 @@ export default function TodoForm(props) {
             type="text"
             placeholder="Enter a task"
             autoFocus="on"
+            value={task}
             className="form-control mb-3"
             onChange={handleChange}
           />
