@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import TodoForm from "./TodoForm";
 
 export default function TodoWrapper() {
+  const [todo, setTodo] = useState("");
   return (
     <div className="TodoWrapper">
       <h1>You handy Todo app</h1>
-      <form>
-        <input type="text" placeholder="Enter a task"></input>
-        <button>Add Todo</button>
-      </form>
+      <TodoForm />
       <ul>
         <li>task 1</li>
         <li>task 2</li>

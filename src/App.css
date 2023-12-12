@@ -1,7 +1,13 @@
 :root {
+  --default-font: "Poppins", sans-serif;
   --footer-font: monospace;
+  --branding-color: #6c63ff;
+  --branding-color-hover: #564feb;
+  --background-color: ##fffdfb;
+  --box-shadow: 0 20px 60px rgba(65, 50, 100, 0.08);
 }
 .App {
+  font-family: var(--default-font);
   max-width: 700px;
   text-align: center;
   margin: 5% auto;
@@ -19,8 +25,38 @@
 .App li {
   list-style: none;
 }
+.App label {
+  display: block;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 29px;
+}
+.App div .row {
+  justify-content: space-evenly;
+}
 .App .logo {
   max-width: 150px;
   display: block;
   margin: 30px auto;
+}
+.App .btn {
+  background-color: var(--branding-color);
+  border-color: var(--branding-color);
+}
+.App .btn:hover {
+  background-color: var(--branding-color-hover);
+  border-color: var(--branding-color-hover);
+  transition: all ease-in-out 200ms;
+}
+.TodoWrapper {
+  background-color: var(--background-color);
+  box-shadow: var(--box-shadow);
+}
+
+@media (max-width: 600px) {
+  button {
+    width: 100%;
+  }
 }
