@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import TodoForm from "./TodoForm";
+import Todo from "./Todo";
 import { v4 as uuidv4 } from "uuid";
 uuidv4();
 
@@ -17,10 +18,9 @@ export default function TodoWrapper() {
     <div className="TodoWrapper">
       <h1>You handy Todo app</h1>
       <TodoForm addTodo={addTodo} />
-      <ul>
-        <li>task 1</li>
-        <li>task 2</li>
-      </ul>
+      {todos.map(function (todo, index) {
+        return <Todo task={todo} key={index} />;
+      })}
     </div>
   );
 }
