@@ -16,7 +16,7 @@ export default function TodoWrapper() {
   }
   return (
     <div className="TodoWrapper">
-      <h1>You handy Todo app</h1>
+      <h1 className="mb-4">You handy Todo app</h1>
       <TodoForm addTodo={addTodo} />
       {todos.map(function (todo, index) {
         return <Todo task={todo} key={index} />;

@@ -4,13 +4,21 @@
   --branding-color: #6c63ff;
   --branding-color-hover: #564feb;
   --background-color: ##fffdfb;
-  --box-shadow: 0 20px 60px rgba(65, 50, 100, 0.08);
+  --default-font-color: #272142;
+  --box-shadow: 0 5px 80px rgba(65, 50, 100, 0.08);
 }
 .App {
   font-family: var(--default-font);
   max-width: 700px;
   text-align: center;
   margin: 5% auto;
+}
+.App h1,
+h2,
+h3,
+h4,
+p {
+  color: var(--default-font-color);
 }
 .App footer {
   font-size: 11px;
@@ -27,7 +35,7 @@
 }
 .App label {
   display: block;
-  font-weight: 500;
+  font-weight: 600;
   font-style: normal;
   font-size: 18px;
   margin-bottom: 20px;
@@ -50,15 +58,18 @@
   border-color: var(--branding-color-hover);
   transition: all ease-in-out 200ms;
 }
-
 .Todo {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 50px 20px;
+  padding: 20px 10px;
   margin-bottom: 10px;
   background-color: var(--background-color);
   box-shadow: var(--box-shadow);
+}
+.Todo p {
+  margin: 0;
+  color: var(--branding-color);
 }
 .Todo .fa-trash {
   margin-left: 15px;
