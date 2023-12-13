@@ -74,6 +74,9 @@ p {
 .Todo .fa-trash {
   margin-left: 15px;
 }
+.Todo .fa-trash:hover {
+  cursor: pointer;
+}
 @media (max-width: 600px) {
   button {
     width: 100%;

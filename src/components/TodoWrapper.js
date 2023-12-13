@@ -14,12 +14,29 @@ export default function TodoWrapper() {
     ]);
     console.log(todos);
   }
+  function toggleComplete(id) {
+    setTodo(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    );
+  }
+  function deleteTodo(id) {
+    setTodo(todos.filter((todo) => todo.id !== id));
+  }
   return (
     <div className="TodoWrapper">
-      <h1 className="mb-4">You handy Todo app</h1>
+      <h1>You handy Todo app</h1>
       <TodoForm addTodo={addTodo} />
       {todos.map(function (todo, index) {
-        return <Todo task={todo} key={index} />;
+        return (
+          <Todo
+            task={todo}
+            key={index}
+            toggleComplete={toggleComplete}
+            deleteTodo={deleteTodo}
+          />
+        );
       })}
     </div>
   );
