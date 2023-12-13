@@ -24,6 +24,13 @@ export default function TodoWrapper() {
   function deleteTodo(id) {
     setTodo(todos.filter((todo) => todo.id !== id));
   }
+  function editTodo(id) {
+    setTodo(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, isEditing: !todo.isEditing } : todo
+      )
+    );
+  }
   return (
     <div className="TodoWrapper">
       <h1>You handy Todo app</h1>
@@ -35,6 +42,7 @@ export default function TodoWrapper() {
             key={index}
             toggleComplete={toggleComplete}
             deleteTodo={deleteTodo}
+            editTodo={editTodo}
           />
         );
       })}
