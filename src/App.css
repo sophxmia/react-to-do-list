@@ -78,15 +78,14 @@ p {
 .fa-pen:hover {
   cursor: pointer;
 }
-.incompleted {
-  color: #fff;
+.incompleted,
+.completed {
   cursor: pointer;
 }
 
 .completed {
-  color: #c5aeff;
+  color: var(--background-color);
   text-decoration: line-through;
-  cursor: pointer;
 }
 @media (max-width: 600px) {
   button {
