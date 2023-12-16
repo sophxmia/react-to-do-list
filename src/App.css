@@ -67,17 +67,25 @@ p {
   background-color: var(--background-color);
   box-shadow: var(--box-shadow);
 }
-.Todo p {
+.Todo label {
   margin: 0;
   color: var(--branding-color);
 }
 .Todo .fa-trash {
   margin-left: 15px;
 }
-.Todo .fa-trash:hover {
+.Todo .fa-trash:hover,
+.fa-pen:hover {
   cursor: pointer;
 }
-.Todo .fa-pen:hover {
+.incompleted {
+  color: #fff;
+  cursor: pointer;
+}
+
+.completed {
+  color: #c5aeff;
+  text-decoration: line-through;
   cursor: pointer;
 }
 @media (max-width: 600px) {

@@ -6,12 +6,12 @@ import { faPen } from "@fortawesome/free-solid-svg-icons";
 export default function Todo(props) {
   return (
     <div className="Todo">
-      <p
+      <label
         className={`${props.task.completed ? "completed" : "incompleted"}`}
         onClick={() => props.toggleComplete(props.task.id)}
       >
         {props.task.task}
-      </p>
+      </label>
       <div>
         <FontAwesomeIcon
           icon={faPen}
