@@ -14,6 +14,7 @@ export default function TodoWrapper() {
     ]);
     console.log(todos);
   }
+
   function toggleComplete(id) {
     setTodo(
       todos.map((todo) =>
@@ -21,16 +22,24 @@ export default function TodoWrapper() {
       )
     );
   }
+
   function deleteTodo(id) {
     setTodo(todos.filter((todo) => todo.id !== id));
   }
+
   function editTodo(id) {
-    setTodo(
-      todos.map((todo) =>
-        todo.id === id ? { ...todo, isEditing: !todo.isEditing } : todo
-      )
-    );
+    const editedTodo = prompt("What do you want to improve?");
+    if (editedTodo !== null) {
+      setTodo(
+        todos.map((todo) =>
+          todo.id === id
+            ? { ...todo, task: editedTodo, isEditing: !todo.isEditing }
+            : todo
+        )
+      );
+    }
   }
+
   return (
     <div className="TodoWrapper">
       <h1>You handy Todo app</h1>
