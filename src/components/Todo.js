@@ -8,8 +8,10 @@ export default function Todo(props) {
   function handleInputChange(event) {
     setEditedTask(event.target.value);
   }
-  function handleEditSubmit() {
-    props.editTodo(props.task.id, editedTask);
+  function handleEditSubmit(event) {
+    if (event.key === "Enter") {
+      props.editTodo(props.task.id, editedTask);
+    }
   }
   return (
     <div className="Todo">
@@ -17,8 +19,10 @@ export default function Todo(props) {
         <input
           type="text"
           value={editedTask}
+          className="form-control"
           onChange={handleInputChange}
           onBlur={handleEditSubmit}
+          onKeyDown={handleEditSubmit}
           autoFocus
         />
       ) : (
