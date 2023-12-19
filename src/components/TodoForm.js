@@ -22,6 +22,7 @@ export default function TodoForm(props) {
             placeholder="Enter a task"
             autoFocus="on"
             value={task}
+            maxLength={20}
             className="form-control mb-3"
             onChange={handleChange}
           />

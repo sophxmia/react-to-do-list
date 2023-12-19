@@ -8,7 +8,7 @@ export default function Todo(props) {
   function handleInputChange(event) {
     setEditedTask(event.target.value);
   }
-  function handleEditSubmit(event) {
+  function handleEditSubmit() {
     props.editTodo(props.task.id, editedTask);
   }
   function handleEditKeySubmit(event) {
@@ -26,6 +26,7 @@ export default function Todo(props) {
           onChange={handleInputChange}
           onBlur={handleEditSubmit}
           onKeyDown={handleEditKeySubmit}
+          maxLength={20}
           autoFocus
         />
       ) : (

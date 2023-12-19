@@ -58,11 +58,14 @@ p {
   border-color: var(--branding-color-hover);
   transition: all 0.2s ease-in-out;
 }
+.TodoForm {
+  margin-bottom: 25px;
+}
 .Todo {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px 10px;
+  padding: 20px 40px;
   margin-bottom: 10px;
   background-color: var(--background-color);
   box-shadow: var(--box-shadow);
@@ -83,10 +86,9 @@ p {
 .completed {
   cursor: pointer;
 }
-
 .completed {
-  color: var(--background-color);
   text-decoration: line-through;
+  opacity: 0.7;
 }
 @media (max-width: 600px) {
   button {
