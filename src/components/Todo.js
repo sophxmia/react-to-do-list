@@ -9,6 +9,9 @@ export default function Todo(props) {
     setEditedTask(event.target.value);
   }
   function handleEditSubmit(event) {
+    props.editTodo(props.task.id, editedTask);
+  }
+  function handleEditKeySubmit(event) {
     if (event.key === "Enter") {
       props.editTodo(props.task.id, editedTask);
     }
@@ -22,7 +25,7 @@ export default function Todo(props) {
           className="form-control"
           onChange={handleInputChange}
           onBlur={handleEditSubmit}
-          onKeyDown={handleEditSubmit}
+          onKeyDown={handleEditKeySubmit}
           autoFocus
         />
       ) : (
