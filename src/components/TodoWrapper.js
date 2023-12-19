@@ -7,11 +7,7 @@ uuidv4();
 export default function TodoWrapper() {
   const [todos, setTodo] = useState(() => {
     const savedTodos = localStorage.getItem("todos");
-    if (savedTodos) {
-      return JSON.parse(savedTodos);
-    } else {
-      return [];
-    }
+    return savedTodos ? JSON.parse(savedTodos) : [];
   });
 
   useEffect(() => {
@@ -38,17 +34,14 @@ export default function TodoWrapper() {
     setTodo(todos.filter((todo) => todo.id !== id));
   }
 
-  function editTodo(id) {
-    const editedTodo = prompt("What do you want to improve?");
-    if (editedTodo !== null) {
-      setTodo(
-        todos.map((todo) =>
-          todo.id === id
-            ? { ...todo, task: editedTodo, isEditing: !todo.isEditing }
-            : todo
-        )
-      );
-    }
+  function editTodo(id, editedTask) {
+    setTodo(
+      todos.map((todo) =>
+        todo.id === id
+          ? { ...todo, task: editedTask, isEditing: !todo.isEditing }
+          : todo
+      )
+    );
   }
 
   return (
