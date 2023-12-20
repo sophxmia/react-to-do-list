@@ -74,16 +74,20 @@ p {
   margin: 0;
   color: var(--branding-color);
 }
+.Todo .form-check-input {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.Todo .form-check-input:checked {
+  background-color: var(--branding-color-hover);
+  border-color: var(--branding-color-hover);
+}
 .Todo .fa-trash,
 .fa-pen {
   margin-left: 15px;
 }
 .Todo .fa-trash:hover,
 .fa-pen:hover {
-  cursor: pointer;
-}
-.incompleted,
-.completed {
   cursor: pointer;
 }
 .completed {

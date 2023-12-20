@@ -18,6 +18,11 @@ export default function Todo(props) {
   }
   return (
     <div className="Todo">
+      <input
+        type="checkbox"
+        className="form-check-input"
+        onClick={() => props.toggleComplete(props.task.id)}
+      />
       {props.task.isEditing ? (
         <input
           type="text"
@@ -32,7 +37,6 @@ export default function Todo(props) {
       ) : (
         <label
           className={`${props.task.completed ? "completed" : "incompleted"}`}
-          onClick={() => props.toggleComplete(props.task.id)}
         >
           {props.task.task}
         </label>
