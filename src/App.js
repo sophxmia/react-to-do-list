@@ -28,7 +28,7 @@ function App() {
           </a>
           , written by{" "}
           <a
-            href="https://brilliant-meerkat-d49135.netlify.app/"
+            href="https://maliarenko-sofiia-portfolio.netlify.app/"
             target="_blank"
             rel="noreferrer"
             title="Netlify link to the portfolio"
